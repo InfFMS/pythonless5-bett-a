@@ -4,3 +4,19 @@
 # Пример: ввод N = 6
 # [1,2,3,4,5,6]
 # Вывод: [3,2,1,6,5,4]
+
+import random
+def n():
+    n = int(input('Введите четное число: '))
+    while not(n % 2 == 0):
+        n = int(input('Введите четное число: '))
+
+    return n
+
+n = n()
+lst = [random.randint(-1000, 1000) for _ in range(n)]
+print(lst)
+l1 = lst[:len(lst)//2]
+l2 = lst[len(lst)//2:]
+lst = l1[::-1] + l2[::-1]
+print(lst)
